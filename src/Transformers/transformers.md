@@ -44,37 +44,37 @@ f1: 0.8154
 BERTIĆ
 
 TEST1 TRAIN3
-accuracy: 0.6397
-precision: 0.7130
-recall: 0.6397
-f1: 0.6551
+accuracy: 0.6667
+precision: 0.7070
+recall: 0.6667
+f1: 0.6752
 
 TEST2 TRAIN3
-accuracy: 0.7473
-precision: 0.7765
-recall: 0.7473
-f1: 0.7537
+accuracy: 0.7516
+precision: 0.7641
+recall: 0.7516
+f1: 0.7519
 
 TEST3 TRAIN3
-accuracy: 0.8331
-precision: 0.8342
-recall: 0.8331
-f1: 0.8295
+accuracy: 0.8115
+precision: 0.8176
+recall: 0.8115
+f1: 0.8066
 
 TEST1 TRAIN
-accuracy: 0.7169
-precision: 0.7146
-recall: 0.7169
-f1: 0.7157
+accuracy: 0.6973
+precision: 0.7167
+recall: 0.6973
+f1: 0.7036
 
 TEST2 TRAIN
-accuracy: 0.8164
-precision: 0.8134
-recall: 0.8164
-f1: 0.8127
+accuracy: 0.7981
+precision: 0.8003
+recall: 0.7981
+f1: 0.7986
 
 TEST3 TRAIN
-accuracy: 0.8420
-precision: 0.8400
-recall: 0.8420
-f1: 0.8395
+accuracy: 0.8357
+precision: 0.8380
+recall: 0.8357
+f1: 0.8365
