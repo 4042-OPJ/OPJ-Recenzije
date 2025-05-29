@@ -7,74 +7,74 @@ CroSloEngual BERT
 
 TEST1 TRAIN3
 accuracy: 0.6801
-precision: 0.7070
+f1: 0.6911
+precision: 0.7111
 recall: 0.6801
-f1: 0.6901
 
 TEST2 TRAIN3
 accuracy: 0.7840
-precision: 0.7846
+f1: 0.7842
+precision: 0.7845
 recall: 0.7840
-f1: 0.7843
 
 TEST3 TRAIN3
-accuracy: 0.8038
-precision: 0.8002
-recall: 0.8038
-f1: 0.7987
+accuracy: 0.8051
+f1: 0.8002
+precision: 0.8017
+recall: 0.8051
 
 TEST1 TRAIN
-accuracy: 0.7120
-precision: 0.7259
-recall: 0.7120
-f1: 0.7160
+accuracy: 0.7169
+f1: 0.7134
+precision: 0.7109
+recall: 0.7169
 
 TEST2 TRAIN
-accuracy: 0.7959
-precision: 0.7936
-recall: 0.7959
-f1: 0.7933
+accuracy: 0.7905
+f1: 0.7800
+precision: 0.7861
+recall: 0.7905
 
 TEST3 TRAIN
-accuracy: 0.8178
-precision: 0.8165
-recall: 0.8178
-f1: 0.8154
+accuracy: 0.8255
+f1: 0.8182
+precision: 0.8298
+recall: 0.8255
 
 BERTIĆ
 
 TEST1 TRAIN3
-accuracy: 0.6667
-precision: 0.7070
-recall: 0.6667
-f1: 0.6752
+accuracy: 0.6471
+f1: 0.6597
+precision: 0.7061
+recall: 0.6471
 
 TEST2 TRAIN3
-accuracy: 0.7516
-precision: 0.7641
-recall: 0.7516
-f1: 0.7519
+accuracy: 0.7430
+f1: 0.7481
+precision: 0.7734
+recall: 0.7430
 
 TEST3 TRAIN3
-accuracy: 0.8115
-precision: 0.8176
-recall: 0.8115
-f1: 0.8066
+accuracy: 0.8280
+f1: 0.8270
+precision: 0.8283
+recall: 0.8280
 
 TEST1 TRAIN
-accuracy: 0.6973
-precision: 0.7167
-recall: 0.6973
-f1: 0.7036
+accuracy: 0.7034
+precision: 0.7199
+recall: 0.7034
+f1: 0.7099
 
 TEST2 TRAIN
-accuracy: 0.7981
-precision: 0.8003
-recall: 0.7981
-f1: 0.7986
+accuracy: 0.8089
+precision: 0.8103
+recall: 0.8089
+f1: 0.8093
 
 TEST3 TRAIN
-accuracy: 0.8357
-precision: 0.8380
-recall: 0.8357
-f1: 0.8365
+accuracy: 0.8433
+precision: 0.8428
+recall: 0.8433
+f1: 0.8429
