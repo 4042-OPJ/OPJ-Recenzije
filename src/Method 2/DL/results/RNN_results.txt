@@ -1,5 +1,5 @@
 TRAIN - test1
-model RNNOptuna-T-t1.pt
+model RNN-T-t1.pt
 testing:
 train set - test set: Weighted F1 score
 TRAIN - test1: 60.29
@@ -7,7 +7,7 @@ TRAIN - test2: 59.81
 TRAIN - test3: 74.99
 
 TRAIN - test2
-model RNNOptuna-T-t2.pt
+model RNN-T-t2.pt
 testing:
 train set - test set: Weighted F1 score
 TRAIN - test1: 57.23
@@ -15,7 +15,7 @@ TRAIN - test2: 59.56
 TRAIN - test3: 77.66
 
 TRAIN - test3
-model RNNOptuna-T-t3.pt
+model RNN-T-t3.pt
 testing:
 train set - test set: Weighted F1 score
 TRAIN - test1: 58.62
@@ -23,7 +23,7 @@ TRAIN - test2: 59.07
 TRAIN - test3: 77.79
 
 train3 - test1
-model RNNOptuna-t3-t1.pt
+model RNN-t3-t1.pt
 testing:
 train set - test set: Weighted F1 score
 TRAIN - test1: 42.03
@@ -31,7 +31,7 @@ TRAIN - test2: 44.50
 TRAIN - test3: 77.64
 
 train3 - test2
-model RNNOptuna-t3-t2.pt
+model RNN-t3-t2.pt
 testing:
 train set - test set: Weighted F1 score
 TRAIN - test1: 44.58
@@ -39,7 +39,7 @@ TRAIN - test2: 49.07
 TRAIN - test3: 80.67
 
 train3 - test3
-model RNNOptuna-t3-t3.pt
+model RNN-t3-t3.pt
 testing:
 train set - test set: Weighted F1 score
 TRAIN - test1: 44.56
