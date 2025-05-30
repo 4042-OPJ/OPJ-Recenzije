@@ -105,8 +105,3 @@ Accuracy:  0.8096
 Precision (macro): 0.8107
 Recall (macro):    0.8097
 F1 Score (macro):  0.8075
-
-
-RNN LSTM
-TRAIN - test1
-
