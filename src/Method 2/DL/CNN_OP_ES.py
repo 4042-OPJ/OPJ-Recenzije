@@ -32,22 +32,22 @@ BATCH_SIZE = 32 # manje vazno al ono... ak ne 32, 64 za brze i smooth, 16 za spo
 EMBEDDING_DIM = 300 # vec treniran vocab na 300
 
 
-train_3_or_TRAIN = "TRAIN"
+train_3_or_TRAIN = "3"
 
 if train_3_or_TRAIN == "3":
     embedding_matrix_path = "embedding_matrix_3.npy"
     vocab_path = "vocab_cnn_nltk_3.json"
-    model_path = "sentiment_cnn_model_train3_T4EStop.pt"
+    model_path = "CNN1-t3-t1.pt"
 elif train_3_or_TRAIN == "TRAIN":
     embedding_matrix_path = "embedding_matrix.npy"
     vocab_path = "vocab_cnn_nltk_TRAIN.json" #ili _nltk_3
-    model_path = "sentiment_cnn_model_TRAIN_t13EStop.pt" #ili _train3
+    model_path = "CNN1-T-t11.pt" #ili _train3
 
 
 #embedding_matrix_path = "embedding_matrix_3.npy"
 #vocab_path = "vocab_cnn_nltk_3.json" #ili _nltk_3
 #model_path = "sentiment_cnn_model_train3.pt" #ili _train3
-test_data = pd.read_csv("test-1.csv")
+test_data = pd.read_csv("test-3.csv")
 
 
 train1_df = pd.read_csv("train-1.csv")
@@ -215,7 +215,6 @@ def train_model(model, train_loader, test_loader, epochs=EPOCHS, lr=LR, loss_fn=
         val_f1 = f1_score(all_labels, all_preds, average='macro')
         print(f"Validation F1 Score: {val_f1:.4f}")
 
-        # Check early stopping condition
         if val_f1 > best_f1:
             best_f1 = val_f1
             best_model_wts = copy.deepcopy(model.state_dict())
@@ -227,7 +226,6 @@ def train_model(model, train_loader, test_loader, epochs=EPOCHS, lr=LR, loss_fn=
                 print("Early stopping triggered.")
                 break
 
-    # Load best model weights
     model.load_state_dict(best_model_wts)
 
 
@@ -242,11 +240,16 @@ def evaluate_model(model, test_loader):
             pred_labels = torch.argmax(preds, dim=1).cpu().numpy()
             all_preds.extend(pred_labels)
             all_labels.extend(y_batch.numpy())
-    
+    report = classification_report(all_labels, all_preds, output_dict=True)
+    accuracy = accuracy_score(all_labels, all_preds)
+
     print("Classification Report:")
     print(classification_report(all_labels, all_preds))
-    print(f"Accuracy: {accuracy_score(all_labels, all_preds):.4f}")
-    print(f"F1 Score (macro): {f1_score(all_labels, all_preds, average='macro'):.4f}")
+    print("Evaluation Metrics:")
+    print(f"Accuracy:  {accuracy:.4f}")
+    print(f"Precision (macro): {report['macro avg']['precision']:.4f}")
+    print(f"Recall (macro):    {report['macro avg']['recall']:.4f}")
+    print(f"F1 Score (macro):  {report['macro avg']['f1-score']:.4f}")
 
 
 

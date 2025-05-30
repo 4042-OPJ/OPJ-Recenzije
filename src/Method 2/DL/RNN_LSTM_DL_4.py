@@ -17,7 +17,7 @@ import os
 import random
 import json
 
-# Hyperparameters
+
 BATCH_SIZE = 128
 EMBEDDING_DIM = 300
 HIDDEN_DIM = 256
@@ -27,10 +27,10 @@ LR = 5e-3
 N_EPOCHS = 20
 MIN_FREQ = 3
 MAX_LENGTH = 256
-FASTTEXT_PATH = "/home/fmadaric/opj/DLver3/cc.hr.300.vec"  # Keep configurable
+FASTTEXT_PATH = "/home/fmadaric/opj/DLver3/cc.hr.300.vec"
 SEED = 1234
-MODEL_PATH = "RNNOptuna.pt"
-PARAMS_PATH = "RNNOptuna_params.json"
+MODEL_PATH = "RNN-T-t3.pt"
+PARAMS_PATH = "RNNOptuna_params.json" #obsolete
 
 np.random.seed(SEED)
 torch.manual_seed(SEED)
@@ -232,7 +232,7 @@ def objective(trial: Trial):
     best_val_loss = float("inf")
     best_model_state = None
 
-    for epoch in range(N_EPOCHS):  # Reduce if too slow
+    for epoch in range(N_EPOCHS):
         train_loss, _ = train_epoch(train_data, model, optimizer, criterion, device, pad_index)
         val_loss, _ = eval_epoch(test_data, model, criterion, device, pad_index)
 
@@ -278,8 +278,6 @@ def eval_epoch(data, model, criterion, device, pad_index):
 n_epochs = N_EPOCHS
 best_valid_loss = float("inf")
 
-MODEL_PATH = "RNNOptuna.pt"
-
 # model = LSTM(
 #     vocab_size,
 #     embedding_dim,
@@ -291,7 +289,6 @@ MODEL_PATH = "RNNOptuna.pt"
 #     pad_index,
 #     pretrained_embeddings=pretrained_embeddings
 # )
-
 
 if os.path.exists(MODEL_PATH):
     print(f"Model checkpoint found. Loading from {MODEL_PATH}...")
@@ -313,7 +310,6 @@ if os.path.exists(MODEL_PATH):
     model = best_model
 
 else:
-    # Run Optuna hyperparameter search
     study = optuna.create_study(direction="maximize")
     study.optimize(objective, n_trials=30)
 
@@ -321,7 +317,6 @@ else:
     print(study.best_trial.params)
 
     best_params = study.best_trial.params
-    # Save parameters for future use
     with open(PARAMS_PATH, "w") as f:
         json.dump(best_params, f)
 
@@ -388,12 +383,12 @@ def evaluate_and_plot(y_true, y_pred, class_names):
 
 def preprocess_sentences(data, tokenizer, vocab, max_length=256):
     if isinstance(data, list):
-        # Assume list of dicts with "Sentence" and "Label"
+        # lista dicta
         tokenized = [tokenizer(d["Sentence"])[:max_length] for d in data]
         ids = [vocab.lookup_indices(tokens) for tokens in tokenized]
         labels = [d["Label"] for d in data]
     else:
-        # Assume pandas DataFrame
+        # Za pd df
         tokenized = [tokenizer(text)[:max_length] for text in data["Sentence"]]
         ids = [vocab.lookup_indices(tokens) for tokens in tokenized]
         labels = data["Label"].tolist()
@@ -414,6 +409,6 @@ class_names = ["positive", "neutral", "negative"]
 print("Test {} Results:".format(TEST_N))
 evaluate_and_plot(test3_true, test3_preds, class_names)
 
-print("All Test Sets Combined Results:")
-evaluate_and_plot(all_test_true, all_test_preds, class_names)
+#print("All Test Sets Combined Results:")
+#evaluate_and_plot(all_test_true, all_test_preds, class_names)
 
