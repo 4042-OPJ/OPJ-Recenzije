@@ -56,3 +56,53 @@ Group 1 (Test-1 and Train-1) originally used 1 for negative and 2 for positive. 
 | 1.b.ii | Machine learning | Multinomial Naive Bayes | TRAIN | Precision=0.606, Recall=0.659, F1=0.618, Accuracy=0.659 | Precision=0.637, Recall=0.673, F1=0.621, Accuracy=0.673 | Precision=0.676, Recall=0.694, **F1=0.646**, Accuracy=0.694 |
 
 # Deep Learning results
+CNN Results
+Model trained on TRAIN (train1 + train2 + train3), hyperparameters adjusted for test-1
+parameters: {'lr': 0.0045992912985175025, 'dropout': 0.45827226824902384, 'num_filters': 350, 'batch_size': 16}
+model: CNN1-T-t11.pt
+
+| train set | test set | accuracy | Macro F1 score |
+|-----------|----------|----------|----------------|
+| TRAIN     | test1    | 0.6401   | 0.5158         |
+| TRAIN     | test2    | 0.6032   | 0.5135         |
+| TRAIN     | test3    | 0.7856   | 0.7822         |
+
+Model trained on train-3, hyperparameters adjusted for test-1
+parameters: {'lr': 4.6049000018608994e-05, 'dropout': 0.16486342956301311, 'num_filters': 250, 'batch_size': 16}
+model: CNN1-t3-t1.pt
+
+| train set | test set | accuracy | Macro F1 score |
+|-----------|----------|----------|----------------|
+| train3    | test1    | 0.4472   | 0.4067         |
+| train3    | test2    | 0.5317   | 0.4817         |
+| train3    | test3    | 0.8096   | 0.8075         |
+
+Other model results can be found in the results folder under Method2/DL/results
+Models such as CNN1-T-t3, which had their hyperparams adjusted for the test-3, obviously show better results for the test-3 set, but test-1 scores seems to drop significantly when the hyperparams are adjusted for any other set.
+
+| train set | test set | accuracy | Macro F1 score |
+|-----------|----------|----------|----------------|
+| TRAIN     | test1    | 0.5743   | 0.4858         |
+| TRAIN     | test2    | 0.6059   | 0.5455         |
+| TRAIN     | test3    | 0.8108   | 0.8096         |
+
+
+RNN Results
+Model trained on TRAIN (train1 + train2 + train3), hyperparameters adjusted for test-3
+Model: RNN-T-t3.pt
+
+| train set | test set | Weighted F1 score |
+|-----------|----------|-------------------|
+| TRAIN     | test1    | 58.62             |
+| TRAIN     | test2    | 59.07             |
+| TRAIN     | test3    | 77.79             |
+
+Model trained on train-3, hyperparameters adjusted for test-2
+Model: RNN-t3-t2.pt
+
+| train set | test set | Weighted F1 score |
+|-----------|----------|-------------------|
+| TRAIN     | test1    | 44.58             |
+| TRAIN     | test2    | 49.07             |
+| TRAIN     | test3    | 80.67             |
+
