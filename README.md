@@ -64,11 +64,11 @@ parameters: {'lr': 0.0045992912985175025, 'dropout': 0.45827226824902384, 'num_f
 
 model: CNN1-T-t11.pt
 
-| train set | test set | accuracy | Macro F1 score |
-|-----------|----------|----------|----------------|
-| TRAIN     | test1    | 0.6401   | 0.5158         |
-| TRAIN     | test2    | 0.6032   | 0.5135         |
-| TRAIN     | test3    | 0.7856   | 0.7822         |
+| train set | test set | Accuracy | Precision | Recall | Macro F1 score |
+|-----------|----------|----------|-----------|--------|----------------|
+| TRAIN     | test1    | 0.6401   | 0.5088    | 0.5256 | 0.5158         |
+| TRAIN     | test2    | 0.6032   | 0.5134    | 0.5139 | 0.5135         |
+| TRAIN     | test3    | 0.7856   | 0.8008    | 0.7857 | 0.7822         |
 
 Model trained on train-3, hyperparameters adjusted for test-1
 
@@ -76,11 +76,11 @@ parameters: {'lr': 4.6049000018608994e-05, 'dropout': 0.16486342956301311, 'num_
 
 model: CNN1-t3-t1.pt
 
-| train set | test set | accuracy | Macro F1 score |
-|-----------|----------|----------|----------------|
-| train3    | test1    | 0.4472   | 0.4067         |
-| train3    | test2    | 0.5317   | 0.4817         |
-| train3    | test3    | 0.8096   | 0.8075         |
+| train set | test set | Accuracy | Precision | Recall | Macro F1 score |
+|-----------|----------|----------|-----------|--------|----------------|
+| test3     | test1    | 0.4472   | 0.4363    | 0.4938 | 0.4067         |
+| test3     | test2    | 0.5317   | 0.4874    | 0.5117 | 0.4817         |
+| test3     | test3    | 0.8096   | 0.8107    | 0.8097 | 0.8075         |
 
 Other model results can be found in the results folder under Method2/DL/results
 
