@@ -1,0 +1,6 @@
+Running the CNN code to recreate the same results requires the vocab JSON files, as well as the embedding matrix npy files, both of which are over 25MB / too large for github.
+Without these files, same as the models, the code will make new ones. However, as the code uses Fasttext, to create the embedding matrix "cc.hr.300.bin" is needed. It can be downloaded here: https://fasttext.cc/docs/en/crawl-vectors.html
+
+The RNN code also uses fasttext and needs cc.hr.300.vec to work.
+
+The paths in the code also need to be adjusted. They are currently hardcoded to /home/fmadaric/opj/... due to technical difficulties.
