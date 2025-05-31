@@ -115,3 +115,40 @@ Model: RNN-t3-t2.pt
 | TRAIN     | test2    | 49.07             |
 | TRAIN     | test3    | 80.67             |
 
+
+# Fine-Tuned Transformer Results
+
+Fine-tuned Transformer models made using pre-trained **BERTić** and **CroSloEngual BERT** models.  
+Fine-tuned models are available on Huggingface in `.zip` files (each `.zip` contains models trained on two datasets - TRAIN and TRAIN3).
+
+### CroSloEngual BERT - TRAIN3
+
+| Test set | Accuracy | F1     | Precision | Recall |
+|----------|----------|--------|-----------|--------|
+| TEST1    | 0.6801   | 0.6911 | 0.7111    | 0.6801 |
+| TEST2    | 0.7840   | 0.7842 | 0.7845    | 0.7840 |
+| TEST3    | 0.8051   | 0.8002 | 0.8017    | 0.8051 |
+
+### CroSloEngual BERT - TRAIN
+
+| Test set | Accuracy | F1     | Precision | Recall |
+|----------|----------|--------|-----------|--------|
+| TEST1    | 0.7169   | 0.7134 | 0.7109    | 0.7169 |
+| TEST2    | 0.7905   | 0.7800 | 0.7861    | 0.7905 |
+| TEST3    | 0.8255   | 0.8182 | 0.8298    | 0.8255 |
+
+### BERTić - TRAIN3
+
+| Test set | Accuracy | F1     | Precision | Recall |
+|----------|----------|--------|-----------|--------|
+| TEST1    | 0.6471   | 0.6597 | 0.7061    | 0.6471 |
+| TEST2    | 0.7430   | 0.7481 | 0.7734    | 0.7430 |
+| TEST3    | 0.8280   | 0.8270 | 0.8283    | 0.8280 |
+
+### BERTić - TRAIN
+
+| Test set | Accuracy | F1     | Precision | Recall |
+|----------|----------|--------|-----------|--------|
+| TEST1    | 0.7034   | 0.7099 | 0.7199    | 0.7034 |
+| TEST2    | 0.8089   | 0.8093 | 0.8103    | 0.8089 |
+| TEST3    | 0.8433   | 0.8429 | 0.8428    | 0.8433 |
