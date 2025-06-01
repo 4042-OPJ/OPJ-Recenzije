@@ -45,6 +45,9 @@ The dataset was created using the stratify option on all three corpora to create
 
 Group 1 (Test-1 and Train-1) originally used 1 for negative and 2 for positive. This has been adjusted to match the sets from other groups.
 
+----------------------------------------------------------------------------------------------------------------------------------
+You can find all the models metioned below on [our HuggingFace profile](https://huggingface.co/InfZnDipl). (Work in progress...)
+----------------------------------------------------------------------------------------------------------------------------------
 
 # Machine Learning results
 
