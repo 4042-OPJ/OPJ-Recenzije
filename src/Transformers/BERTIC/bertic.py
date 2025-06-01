@@ -15,9 +15,9 @@ from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 set_seed(42)
 
 train_path = "/home/sbiskup/OPJ/train-3.csv"
-test_1_path = "/home/sbiskup/OPJ/test-1.csv"  # your group's test set
-test_2_path = "/home/sbiskup/OPJ/test-2.csv"  # other group's test set 2
-test_3_path = "/home/sbiskup/OPJ/test-3.csv"  # other group's test set 3
+test_1_path = "/home/sbiskup/OPJ/test-1.csv"
+test_2_path = "/home/sbiskup/OPJ/test-2.csv"
+test_3_path = "/home/sbiskup/OPJ/test-3.csv"
 
 dataset = load_dataset("csv", data_files={
     "train": train_path,
