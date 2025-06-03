@@ -3,10 +3,11 @@ New models:
 TRAIN - test2
 RNN-NOVO-T-t2-6.pt
 
-train set	test set	Accuracy	Precision	Recall	Macro F1 score
-TRAIN	    test1	    0.6034   	0.6355	  0.6034	0.6162
-TRAIN	    test2    	0.5857	  0.6106  	0.5857	0.5955
-TRAIN    	test3    	0.7667	  0.7778	  0.7667	0.7615
+| train set | test set | Accuracy | Precision | Recall | Macro F1 score |
+|-----------|----------|----------|-----------|--------|----------------|
+| TRAIN     | test1    | 0.6034   | 0.6355    | 0.6034 | 0.6162         |
+| TRAIN     | test2    | 0.5857   | 0.6106    | 0.5857 | 0.5955         |
+| TRAIN     | test3    | 0.7667   | 0.7778    | 0.7667 | 0.7615         |
 
 Test 1 results:
               precision    recall  f1-score   support
@@ -88,10 +89,11 @@ negative      0.8333  0.6084    0.7033
 TRAIN - test3
 RNN-NOVO-T-t3-5.pt
 
-train set	test set	Accuracy	Precision	Recall	Macro F1 score
-TRAIN    	test1	    0.5452	  0.6049  	0.5452	0.5643
-TRAIN	    test2    	0.5520	  0.5956  	0.5520	0.5676
-TRAIN	    test3	    0.7680	  0.7775	  0.7680	0.7633
+| train set | test set | Accuracy | Precision | Recall | Macro F1 score |
+|-----------|----------|----------|-----------|--------|----------------|
+| TRAIN     | test1    | 0.5452   | 0.6049    | 0.5452 | 0.5643         |
+| TRAIN     | test2    | 0.5520   | 0.5956    | 0.5520 | 0.5676         |
+| TRAIN     | test3    | 0.7680   | 0.7775    | 0.7680 | 0.7633         |
 
 Test 1 results:
               precision    recall  f1-score   support
