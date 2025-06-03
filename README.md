@@ -98,6 +98,24 @@ Models such as CNN1-T-t3, which had their hyperparams adjusted for the test-3, o
 
 RNN Results
 
+The newest RNN-LSTM model [temp]
+
+Model: RNN-NOVO-T-t3-5.pt
+
+Model trained on TRAIN (train1 + train2 + train3), hyperparameters adjusted for test-3
+
+more detailed results can be found in xxx
+
+
+| train set | test set | Accuracy | Precision | Recall | Macro F1 score |
+|-----------|----------|----------|-----------|--------|----------------|
+| TRAIN     | test1    | 0.5452   | 0.6049    | 0.5452 | 0.5643         |
+| TRAIN     | test2    | 0.5520   | 0.5956    | 0.5520 | 0.5676         |
+| TRAIN     | test3    | 0.7680   | 0.7775    | 0.7680 | 0.7633         |
+
+
+Older models:
+
 Model trained on TRAIN (train1 + train2 + train3), hyperparameters adjusted for test-3
 
 Model: RNN-T-t3.pt
