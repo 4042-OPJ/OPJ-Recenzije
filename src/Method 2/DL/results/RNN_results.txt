@@ -1,7 +1,98 @@
 New models:
 
-TRAN - test3
+TRAIN - test2
+RNN-NOVO-T-t2-6.pt
+
+train set	test set	Accuracy	Precision	Recall	Macro F1 score
+TRAIN	    test1	    0.6034   	0.6355	  0.6034	0.6162
+TRAIN	    test2    	0.5857	  0.6106  	0.5857	0.5955
+TRAIN    	test3    	0.7667	  0.7778	  0.7667	0.7615
+
+Test 1 results:
+              precision    recall  f1-score   support
+
+    positive     0.4603    0.5273    0.4915       165
+     neutral     0.7579    0.6698    0.7111       430
+    negative     0.2262    0.3276    0.2676        58
+
+    accuracy                         0.6034       653
+   macro avg     0.4815    0.5082    0.4901       653
+weighted avg     0.6355    0.6034    0.6162       653
+
+
+Overall Accuracy: 0.6034
+Overall Precision: 0.6355
+Overall Recall: 0.6034
+Overall F1-Score: 0.6162
+
+Class      Precision  Recall  F1-Score
+----------------------------------------
+positive      0.4603  0.5273    0.4915
+neutral       0.7579  0.6698    0.7111
+negative      0.2262  0.3276    0.2676
+----------------------------------------
+
+
+Test 2 results:
+              precision    recall  f1-score   support
+
+    positive     0.5556    0.4861    0.5185       216
+     neutral     0.7164    0.6798    0.6976       431
+    negative     0.2517    0.3830    0.3038        94
+
+    accuracy                         0.5857       741
+   macro avg     0.5079    0.5163    0.5066       741
+weighted avg     0.6106    0.5857    0.5955       741
+
+
+Overall Accuracy: 0.5857
+Overall Precision: 0.6106
+Overall Recall: 0.5857
+Overall F1-Score: 0.5955
+
+Class      Precision  Recall  F1-Score
+----------------------------------------
+positive      0.5556  0.4861    0.5185
+neutral       0.7164  0.6798    0.6976
+negative      0.2517  0.3830    0.3038
+----------------------------------------
+
+
+Test 3 results:
+              precision    recall  f1-score   support
+
+    positive     0.7821    0.7528    0.7672       267
+     neutral     0.7180    0.9392    0.8138       263
+    negative     0.8333    0.6084    0.7033       263
+
+    accuracy                         0.7667       793
+   macro avg     0.7778    0.7668    0.7614       793
+weighted avg     0.7778    0.7667    0.7615       793
+
+
+Overall Accuracy: 0.7667
+Overall Precision: 0.7778
+Overall Recall: 0.7667
+Overall F1-Score: 0.7615
+
+Class      Precision  Recall  F1-Score
+----------------------------------------
+positive      0.7821  0.7528    0.7672
+neutral       0.7180  0.9392    0.8138
+negative      0.8333  0.6084    0.7033
+----------------------------------------
+
+
+
+
+TRAIN - test3
 RNN-NOVO-T-t3-5.pt
+
+train set	test set	Accuracy	Precision	Recall	Macro F1 score
+TRAIN    	test1	    0.5452	  0.6049  	0.5452	0.5643
+TRAIN	    test2    	0.5520	  0.5956  	0.5520	0.5676
+TRAIN	    test3	    0.7680	  0.7775	  0.7680	0.7633
+
 Test 1 results:
               precision    recall  f1-score   support
 
@@ -76,10 +167,7 @@ negative      0.8281  0.6046    0.6989
 ----------------------------------------
 
 
-RNN-NOVO-T-t3-5.pt [temp]
-1: 6162
-2: 5955
-3: 7615
+
 
 
 
